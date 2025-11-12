@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package fenrirMandou;
+
+service GerenciadorTarefas{
+    rpc Criar(CriarRequest) returns (Tarefa) {}
+    rpc Listar(ListarRequest) returns (ListarResponse) {}
+    rpc Atualizar(Tarefa) returns (Tarefa) {}
+    rpc Deletar(DeletarRequest) returns (DeletarResponse) {}
+}
+
+message Tarefa{
+    string id = 1;
+    string titulo = 2;
+    string descricao = 3;
+    Status_Tarefa status = 4;
+    string data = 5;
+    repeated string responsavel = 6;
+}
+
+enum Status_Tarefa {
+  PENDENTE = 0;
+  EM_ANDAMENTO = 1;
+  CONCLUIDA = 2;
+}
+
+// Aqui o sistema cria o ID e assume o status PENDENTE
+message CriarRequest{
+    string titulo = 1;
+    string descricao = 2;
+    string data = 3;
+    repeated string responsavel = 4;
+}
+
+message ListarRequest{
+    // Vazia para listar tudo
+}
+
+message ListarResponse{
+    repeated Tarefa tarefas = 1;
+}
+
+message DeletarRequest{
+    string id = 1;
+}
+
+message DeletarResponse{
+    string mensagem = 1;
+}

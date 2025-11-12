@@ -1,0 +1,21 @@
+services:
+  
+  servidor:
+    build: .  
+    command: python fenrir_servidor.py 
+    ports:
+      - "50051:50051" 
+    volumes:
+        - ./tarefas_db:/app/tarefas_db
+
+  cliente1:
+    build: .      
+    depends_on:
+      - servidor   
+    command: tail -f /dev/null 
+    
+  cliente2:
+    build: .
+    depends_on:
+      - servidor
+    command: tail -f /dev/null 
