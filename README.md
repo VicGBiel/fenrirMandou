@@ -77,21 +77,21 @@ O gRPC usa Protocol Buffers para serialização, que basicamente, converte um ob
 
 ### Comandos para o `fenrir_cliente.py`:
 
-* *--ip*: endereço ip do servidor. Padrão: localhost. 
-* *--port*: porta do servidor. Padrão 50051.
-* *--criar*: cria uma nova tarefa, podendo receber os subcomandos:
-    ** *--titulo*: titulo da tarefa;
-    ** *--descricao*: descricao da tarefa;
-    ** *--data*: data da tarefa;
-    ** *--responsavel*: responsavel (ou responsáveis) da tarefa;
-    ** Obs.: O ID é gerado automaticamente e o status é automanticamente "PENDENTE".
-* *--listar*: lista todas as tarefas.
-* *--atualizar*: atualiza as informações da tarefas. Subcomandos:
-    ** *--id*: ID para localizar a tarefa;
-    ** *--status*: status da tarefas. Só podem ser: "PENDENTE", "EM_ANDAMENTO" e "FINALIZADO";
-    ** Todos os subcomandos de *--criar*.
-* *--deletar*: deleta a tarefa a partir do ID. Subcomando:
-    ** *--id*: ID para localizar a tarefa;
+* `--ip`: endereço ip do servidor. Padrão: localhost. 
+* `--port`: porta do servidor. Padrão 50051.
+* `--criar`: cria uma nova tarefa, podendo receber os subcomandos:
+    * `--titulo`: titulo da tarefa;
+    * `--descricao`: descricao da tarefa;
+    * `--data`: data da tarefa;
+    * `--responsavel`: responsavel (ou responsáveis) da tarefa;
+    * Obs.: O ID é gerado automaticamente e o status é automanticamente "PENDENTE".
+* `--listar`: lista todas as tarefas.
+* `--atualizar`: atualiza as informações da tarefas. Subcomandos:
+    * `--id`: ID para localizar a tarefa;
+    * `--status`: status da tarefas. Só podem ser: "PENDENTE", "EM_ANDAMENTO" e "FINALIZADO";
+    * Todos os subcomandos de *--criar*.
+* `--deletar`: deleta a tarefa a partir do ID. Subcomando:
+    ** `--id`: ID para localizar a tarefa;
 
 Obs.: Em caso de dúvida, também pode ser utilizado o helper "-h" ou "-help" na linha de comando.
 
