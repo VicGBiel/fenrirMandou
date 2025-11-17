@@ -15,7 +15,7 @@ O servidor gRPC (em `fenrir_servidor.py`) expõe 4 métodos que o cliente pode c
 
 Esta seção explica a "arquitetura" do projeto, focando em por que o gRPC e o Protocol Buffers foram usados.
 
-### 1. O Contrato: Protocol Buffers (.proto)
+### 1. Protocol Buffers
 
 A parte principal do gRPC é o arquivo `.proto`, que define quais são as estruturas de dados e quais são os "endpoints" do serviço.
 
