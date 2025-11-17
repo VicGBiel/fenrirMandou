@@ -97,16 +97,13 @@ Obs.: Em caso de dúvida, também pode ser utilizado o helper "-h" ou "-help" na
 
 Existem duas formas de executar este projeto:
 
-### Pré-requisitos 
-
-1.  Clone este repositório.
-
 ### Opção 1: Executando com Docker
 
 Este método simula 3 máquinas (1 servidor, 2 clientes) usando contêineres.
 
 **Pré-requisitos:**
 * [Docker Desktop](https://www.docker.com/products/docker-desktop/) instalado e rodando.
+* Repositório clonado.
 
 **Passos:**
 
@@ -154,6 +151,7 @@ Este método usa dois computadores físicos na mesma rede Wi-Fi.
 **Pré-requisitos:**
 * Ambas as máquinas na mesma rede Wi-Fi.
 * Python e as bibliotecas (`grpcio`, `protobuf`) instalados em ambas.
+* Repositório clonado em ambas.
 
 #### 1. Na Máquina Servidor
 
