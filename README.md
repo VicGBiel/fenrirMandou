@@ -19,10 +19,12 @@ Esta seção explica a "arquitetura" do projeto, focando em por que o gRPC e o P
 
 A parte principal do gRPC é o arquivo `.proto`, que define quais são as estruturas de dados e quais são os "endpoints" do serviço.
 
-O arquivo `fenrir.proto` definiu:
+O arquivo `fenrir.proto` define:
+
 1.  As Mensagens: Como o objeto `Tarefa` é estruturado.
 2.  O Enum: Para garantir que o `status` só possa ter valores válidos.
 3.  O Serviço: Quais funções o servidor expõe.
+
 
 ```proto
 // Arquivo: fenrir.proto
@@ -66,10 +68,10 @@ message CriarRequest{
 // ... (outras mensagens como ListarResponse, DeletarRequest, etc.)
 ```
 
+
 ### 2. Vantagens do gRPC
 
-O gRPC usa Protocol Buffers para **serialização**, que basicamente, converte um objeto em memória em um fluxo de bytes para ser enviado pela rede. Sendo assim, o gRPC se torna mais eficiente que as abordagens mais comuns (como APIs REST com JSON).
-Dessa forma, o gRPC se torna ideal para comunicação interna de microsserviços, onde se é priorizado a performance e confiabilidade.
+O gRPC usa Protocol Buffers para serialização, que basicamente, converte um objeto em memória em um fluxo de bytes para ser enviado pela rede. Sendo assim, o gRPC se torna mais eficiente que as abordagens mais comuns (como APIs REST com JSON).Dessa forma, o gRPC se torna ideal para comunicação interna de microsserviços, onde se é priorizado a performance e confiabilidade.
 
 ## Como Executar
 
