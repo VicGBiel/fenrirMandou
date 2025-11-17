@@ -93,7 +93,7 @@ def serve():
         GerenciadorTarefasServicer(), server
     )
     print("Iniciando servidor na porta 50051")
-    server.add_insecure_port('localhost:50051')
+    server.add_insecure_port('0.0.0.0:50051')
     server.start()
     try:
         server.wait_for_termination()
